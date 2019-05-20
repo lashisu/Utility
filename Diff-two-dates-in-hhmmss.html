@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Date Differences</title>
+  <script src="http://momentjs.com/downloads/moment-with-locales.min.js"></script>
+</head>
+<body>
+	<span id="date"></span>
+  <script>
+		function GetDate(){
+			var date = new Date().getUTCDate();
+			var month = new Date().getUTCMonth();
+			var year = new Date().getUTCFullYear();
+			var hours = new Date().getUTCHours();
+			var minutes = new Date().getUTCMinutes();
+			var seconds = new Date().getUTCSeconds();
+
+			var now  = new Date("2019-05-20T11:51:35.6270000Z");
+			var then = new Date(Date.UTC(year, month, date, hours, minutes, seconds));
+
+			var ms = moment(now,"DD/MM/YYYY HH:mm:ss").diff(moment(then,"DD/MM/YYYY HH:mm:ss"));
+			var d = moment.duration(ms);
+			var s = Math.floor(d.asHours()) + moment.utc(ms).format(":mm:ss");
+			if(ms > 0){
+				return s;
+			}else{
+				return 'End!'
+			}
+		}
+		setInterval(()=>{
+			document.getElementById('date').innerHTML = GetDate();
+		}, 1000)
+  </script>
+</body>
+</html>

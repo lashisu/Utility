@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>GridSystem</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: arial;
+      font-size: 14px;
+    }
+
+    .myTree {
+      border: rgba(0, 0, 0, .3) 1px solid;
+      padding: 10px;
+      margin: 50px;
+      list-style-type: none;
+      overflow: hidden;
+    }
+
+    .myTree i {
+      font-size: 18px;
+      transition: 150ms ease-in;
+    }
+
+    .myTree i.off {
+      transform: rotate(-90deg);
+    }
+
+    .myTree .collapseMe {
+      cursor: pointer;
+    }
+
+    .myTree div>li {
+      border: rgba(0, 0, 0, .12) 1px solid;
+      padding: 10px;
+    }
+
+    .myTree div>li+li {
+      margin-top: 10px
+    }
+
+    .myTree div>li>ul {
+      margin: 10px 0 0 0;
+    }
+
+    .myTree div>li ul li {
+      padding: 5px;
+      margin-top: 5px;
+      list-style: none;
+    }
+
+    .myTree div>li>ul>li label {
+      cursor: pointer;
+    }
+
+
+    .SubMenu {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .25s cubic-bezier(0, 1, 0, 1);
+    }
+
+
+    .SubMenu.open {
+      max-height: 1000px;
+      transition: max-height .5s ease-in-out;
+    }
+
+    .visHidden {
+      visibility: hidden
+    }
+  </style>
+</head>
+
+<body ng-controller="mainCtrl">
+  <ul class="myTree">
+    <script type="text/ng-template" id="treeNodes.html">
+          <li ng-repeat="children in childrens" >
+            <i ng-if="!children.children.length" class="fa fa-caret-down visHidden"></i>  
+            <i ng-if="children.children.length" ng-click="children.expand = (children.expand?false:true);" class="collapseMe fa fa-caret-down" ng-class="{'':(children.children.length && !children.expand), 'off':(children.children.length && children.expand)}"></i>
+              <input type="checkbox" name="tall_{{$index}}" id="tall_{{$index}}" ng-checked="children.checked">
+              <span>{{children.name}}</span>
+              <ul ng-if="children.children.length" class="SubMenu" ng-class="{'open':(children.children.length && !children.expand), '':(children.children.length && children.expand)}" ng-include="'treeNodes.html'" onload="childrens = children.children">
+              </ul>
+          </li>
+        </ul>
+      </script>
+    <div ng-include=" 'treeNodes.html'"></div>
+  </ul>
+  <script>
+    var jimApp = angular.module("mainApp", []);
+    jimApp.controller('mainCtrl', function ($scope) {
+      $scope.childrens = [
+        {
+          "id": "8a80cb816abc689b016abc72d8f91112",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "DASHBOARD",
+          "show": true,
+          "checked": false,
+          "itemKey": "dashboard",
+          "children": [],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91113",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "APPSTORE",
+          "show": true,
+          "checked": true,
+          "itemKey": "appstore",
+          "children": [
+            {
+              "id": "8a80cb816abc689b016abc72d8f91114",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "app store",
+              "show": true,
+              "checked": true,
+              "itemKey": "appstore.appstore",
+              "children": [
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91117",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "My BluePrints",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "appstore.appstore.blueprints",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91118",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "All",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "appstore.appstore.all",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91119",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Liked",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "appstore.appstore.liked",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91120",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Apps",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "appstore.appstore.apps",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91121",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "VMs",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "appstore.appstore.VMs",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91122",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "VM Apps",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "appstore.appstore.VMApps",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                }
+              ],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91115",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "plugins",
+              "show": true,
+              "checked": true,
+              "itemKey": "appstore.plugins",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91116",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Cost Profiles",
+              "show": true,
+              "checked": true,
+              "itemKey": "appstore.costProfiles",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            }
+          ],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91123",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "SERVICES",
+          "show": true,
+          "checked": true,
+          "itemKey": "services",
+          "children": [
+            {
+              "id": "8a80cb816abc689b016abc72d8f91124",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Apps",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.apps",
+              "children": [
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91131",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Container Apps",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.apps.container",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                }
+              ],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91125",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "VMs",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.VMs",
+              "children": [
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91132",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "My VMS",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.VMs.myvms",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91133",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "All VMs",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.VMs.AllVMs",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                }
+              ],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91126",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Containers",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.Containers",
+              "children": [
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91134",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Kubernetes Clusters",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Containers.KubernetesCluster",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91135",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Docker Cluster",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Containers.DockerCluster",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91136",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Networks",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Containers.Networks",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91137",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Images",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Containers.Images",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91138",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Dockers",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Containers.Dockers",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                }
+              ],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91127",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Networks",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.Networks",
+              "children": [
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91139",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Virtual Private Cloud",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Networks.virtualCloud",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91140",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Virtual Networks",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Networks.virtualNetworks",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91141",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Subnet",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Networks.Subnet",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91142",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Resource Groups",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Networks.ResourceGroups",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                }
+              ],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91128",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Security",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.Security",
+              "children": [
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91143",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "IPs/NAT",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Security.IPS",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91144",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Network ACL",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Security.Network",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91145",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Security Group",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Security.SecurityGroup",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                },
+                {
+                  "id": "8a80cb816abc689b016abc72d8f91146",
+                  "inactive": null,
+                  "deleted": null,
+                  "lockVersion": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "createdDate": null,
+                  "createdBy": null,
+                  "owner": null,
+                  "ownerPk": null,
+                  "name": "Static IP Pool",
+                  "show": true,
+                  "checked": true,
+                  "itemKey": "services.Security.StaticIP",
+                  "children": [],
+                  "createUser": null,
+                  "lastUpdated": null,
+                  "created": null,
+                  "lastUpdateUser": null
+                }
+              ],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91129",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Storage",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.Storage",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91130",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Credential Store",
+              "show": true,
+              "checked": true,
+              "itemKey": "services.CredentialStore",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            }
+          ],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91147",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "IAM",
+          "show": true,
+          "checked": true,
+          "itemKey": "IAM",
+          "children": [
+            {
+              "id": "8a80cb816abc689b016abc72d8f91148",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "LDAP",
+              "show": true,
+              "checked": true,
+              "itemKey": "IAM.LDAP",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91149",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Users",
+              "show": true,
+              "checked": true,
+              "itemKey": "IAM.Users",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91150",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Groups",
+              "show": true,
+              "checked": true,
+              "itemKey": "IAM.Groups",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            }
+          ],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91151",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "REPORTS",
+          "show": true,
+          "checked": true,
+          "itemKey": "Reports",
+          "children": [],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91152",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "GOVERNANCE",
+          "show": true,
+          "checked": true,
+          "itemKey": "Governance",
+          "children": [
+            {
+              "id": "8a80cb816abc689b016abc72d8f91153",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Tenants",
+              "show": true,
+              "checked": true,
+              "itemKey": "Governance.Tenants",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            },
+            {
+              "id": "8a80cb816abc689b016abc72d8f91154",
+              "inactive": null,
+              "deleted": null,
+              "lockVersion": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "createdDate": null,
+              "createdBy": null,
+              "owner": null,
+              "ownerPk": null,
+              "name": "Resource Pools",
+              "show": true,
+              "checked": true,
+              "itemKey": "Governance.ResourcePools",
+              "children": [],
+              "createUser": null,
+              "lastUpdated": null,
+              "created": null,
+              "lastUpdateUser": null
+            }
+          ],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91155",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "PROVIDERS",
+          "show": true,
+          "checked": true,
+          "itemKey": "Providers",
+          "children": [],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91156",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "ANALYTICS",
+          "show": true,
+          "checked": true,
+          "itemKey": "Analytics",
+          "children": [],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91168",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "CSP",
+          "show": true,
+          "checked": true,
+          "itemKey": "CSP",
+          "children": [],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        },
+        {
+          "id": "8a80cb816abc689b016abc72d8f91175",
+          "inactive": null,
+          "deleted": null,
+          "lockVersion": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "createdDate": null,
+          "createdBy": null,
+          "owner": null,
+          "ownerPk": null,
+          "name": "GOVSEC",
+          "show": true,
+          "checked": true,
+          "itemKey": "GOVSEC",
+          "children": [],
+          "createUser": null,
+          "lastUpdated": null,
+          "created": null,
+          "lastUpdateUser": null
+        }
+      ];
+    });
+  </script>
+  <script>
+    $(function () {
+      $('input[type="checkbox"]').change(function (e) {
+        var checked = $(this).prop("checked"),
+          container = $(this).parent(),
+          siblings = container.siblings();
+
+        console.log(checked);
+        console.log(container);
+        console.log(siblings);
+
+
+        container.find('input[type="checkbox"]').prop({
+          //indeterminate: false,
+          checked: checked
+        });
+
+        function checkSiblings(el) {
+          var parent = el.parent().parent(),
+            all = true;
+          el.siblings().each(function () {
+            return all = ($(this).children('input[type="checkbox"]').prop("checked") === checked);
+          });
+          if (all && checked) {
+
+            parent.children('input[type="checkbox"]').prop({
+              //indeterminate: false,
+              checked: checked
+            });
+            checkSiblings(parent);
+          } else if (all && !checked) {
+            parent.children('input[type="checkbox"]').prop("checked", checked);
+            //parent.children('input[type="checkbox"]').prop("indeterminate", (parent.find('input[type="checkbox"]:checked').length > 0));
+            checkSiblings(parent);
+          } else {
+            el.parents("li").children('input[type="checkbox"]').prop({
+              //indeterminate: true,
+              checked: true
+            });
+          }
+        }
+        checkSiblings(container);
+      });
+    });
+  </script>
+</body>
+
+</html>
