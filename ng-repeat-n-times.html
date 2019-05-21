@@ -79,6 +79,7 @@
 </head>
 
 <body ng-controller="mainCtrl">
+  <button ng-click="ShowData()">Show Data</button>
   <ul class="myTree">
     <script type="text/ng-template" id="treeNodes.html">
           <li ng-repeat="children in childrens" >
@@ -93,6 +94,7 @@
       </script>
     <div ng-include=" 'treeNodes.html'"></div>
   </ul>
+
   <script>
     var jimApp = angular.module("mainApp", []);
     jimApp.controller('mainCtrl', function ($scope) {
@@ -1095,6 +1097,10 @@
           "lastUpdateUser": null
         }
       ];
+
+      $scope.ShowData = function () {
+        console.log($scope.childrens);
+      }
     });
   </script>
   <script>
