@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Homes121</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" />
+<style>
+body{
+	background-color:#f9f9f9;
+	font-family:arial
+}
+
+.wrapper{
+	width:1140px;
+	margin:0 auto
+}
+
+.Box{
+	overflow:hidden
+}
+
+.Box .InlineBox{
+	display:inline-block;
+	vertical-align:top;
+	margin-right:16px;
+}
+
+@keyframes placeHolderShimmer {
+	0%{ background-position: -400px 0; }
+	100%{ background-position: 400px 0; }
+}
+
+.animated-Block:after {
+	animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-name: placeHolderShimmer;
+	background: #ced4da;
+	background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+	position: absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	content:"";
+	background-size: 800px 100px;
+}
+
+.CartLoading{
+	border:rgba(0,0,0,.12) 1px solid;
+	background: #fff;
+	padding:10px;
+	overflow:hidden;
+}
+
+.CartLoading .Row{
+	overflow:hidden;
+}
+
+.CartLoading .Img{
+	float:left;
+    position: relative;
+    width: 52px;
+	height:89px;
+    background-color: #ced4da;
+    margin-right: 8px;
+    overflow: hidden;
+}
+
+.CartLoading .Content{
+	float:right;
+	width:calc(100% - 65px);
+}
+
+.CartLoading .Content .NamePrice{
+	overflow:hidden;
+}
+
+.CartLoading .Content .NamePrice .Name{
+	height:20px;
+	max-width:55%;
+	width:100%;
+	float:left;
+    overflow: hidden;
+    position: relative;
+}
+
+.CartLoading .Content .NamePrice .Price{
+	height:20px;
+	width:80px;
+	float:right;
+    overflow: hidden;
+    position: relative;
+}
+
+.CartLoading .Content .DateTime{
+	overflow:hidden;
+	margin:8px 0
+}
+
+.CartLoading .Content .DateTime .Date{
+	height:17px;
+	width:100px;
+	float:left;
+    overflow: hidden;
+    position: relative;
+}
+
+.CartLoading .Content .DateTime .Time{
+	height:17px;
+	width:70px;
+	margin-left:8px;
+	float:left;
+    overflow: hidden;
+    position: relative;
+}
+
+.CartLoading .Content .Action{
+	overflow:hidden;
+	margin:8px 0 0 0
+}
+
+.CartLoading .Content .Action .Count{
+	height:36px;
+	width:80px;
+	float:left;
+    overflow: hidden;
+    position: relative;
+	margin-right:8px;
+	border-radius:30px;
+}
+
+.CartLoading .Content .Action .Size{
+	height:36px;
+	width:80px;
+	float:left;
+    overflow: hidden;
+    position: relative;
+	border-radius:30px;
+}
+
+.CartLoading .Content .Action .Icon{
+	height:36px;
+	width:36px;
+	float:right;
+    overflow: hidden;
+    position: relative;
+	border-radius:100%;
+}
+
+
+
+.FeedItem{
+	border:rgba(0,0,0,.12) 1px solid;
+	background: #fff;
+	padding:10px;
+	overflow:hidden;
+	width:200px;
+	margin-bottom:8px;
+}
+
+.FeedItem .Img{
+    position: relative;
+	height:200px;
+    overflow: hidden;
+}
+
+.FeedItem .Time{
+	overflow:hidden;
+	margin:8px 0;
+}
+
+.FeedItem .Time div{
+    position: relative;
+	height:16px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+.FeedItem .Action{
+	overflow:hidden;
+	margin:8px 0 0 0;
+	text-align:center
+}
+
+.FeedItem .Action .Price{
+	height:22px;
+	width:80px;
+    overflow: hidden;
+    position: relative;
+	border-radius:30px;
+	display:inline-block;
+	margin-left:8px;
+}
+
+.FeedItem .Action .Icon{
+	height:22px;
+	width:22px;
+    overflow: hidden;
+    position: relative;
+	border-radius:100%;
+	display:inline-block
+}
+
+.SuggestedItem{
+	border:rgba(0,0,0,.12) 1px solid;
+	background: #fff;
+	padding:10px;
+	overflow:hidden;
+	width:250px;
+}
+
+.SuggestedItem .Name{
+	height:25px;
+    overflow: hidden;
+    position: relative;
+	margin-bottom:8px;
+}
+
+.SuggestedItem .Row{
+	overflow:hidden;
+}
+
+.SuggestedItem .Img{
+	float:left;
+    position: relative;
+    width: 75px;
+	height:100px;
+    background-color: #ced4da;
+    margin-right: 8px;
+    overflow: hidden;
+}
+
+.SuggestedItem .Content{
+	float:right;
+	width:calc(100% - 83px);
+}
+
+.SuggestedItem .Content .Price{
+	height:16px;
+	width:80px;
+    overflow: hidden;
+    position: relative;
+	margin:16px 0;
+}
+
+.SuggestedItem .Content .Time{
+	height:16px;
+	width:100px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.SuggestedItem .Content .Button{
+	height:36px;
+    overflow: hidden;
+    position: relative;
+	border-radius:30px;
+}
+
+.ProductDetail{
+	border: rgba(0,0,0,.12) 1px solid;
+    background: #fff;
+    overflow: hidden;
+}
+
+.ProductDetail .ProductGallery{
+	float:left;
+    width: 437px;
+}
+
+.ProductDetail .ProductGallery .Thumbnail{
+    overflow: hidden;
+    position: relative;
+    padding: 16px;
+    float: left;
+}
+
+.ProductDetail .ProductGallery .Thumbnail .Img{
+	height:75px;
+	width : 75px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ProductDetail .ProductGallery .Thumbnail .Img + .Img{
+	margin-top:16px;
+}
+
+.ProductDetail .ProductGallery .Content{
+    float: right;
+    padding: 16px 0;
+    position: relative;
+}
+
+.ProductDetail .ProductGallery .Content .BigImg{
+	height:348px;
+	width:330px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ProductDetail .ProductGallery .Content .Dots{
+    position: absolute;
+    text-align: center;
+    bottom: 24px;
+    left: 0;
+    right: 16px;
+}
+
+.ProductDetail .ProductGallery .Content .Dots .dot{
+	width:10px;
+	height:10px;
+	display:inline-block;
+	border:rgba(0,0,0,.5) 1px solid;
+	border-radius:100%;
+	cursor:pointer
+}
+
+.ProductDetail .ProductGallery .Content .Dots .dot.active{
+	background-color:rgba(0,0,0,.7);
+}
+
+.ProductDetail .ProductData{
+	float:left;
+	padding:16px;
+	width: calc(100% - 589px);
+}
+
+.ProductDetail .ProductData .PName{
+	height:30px;
+	width:280px;
+    overflow: hidden;
+    position: relative;
+	margin-bottom:16px;
+}
+
+.ProductDetail .ProductData .PTimer{
+	margin-bottom:16px;
+	height: 40px;
+	width:220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ProductDetail .ProductData .BidData{
+	overflow:hidden;
+}
+
+.ProductDetail .ProductData .BidData .Bid{
+	margin-bottom:16px;
+	height: 56px;
+	width:100px;
+    overflow: hidden;
+    position: relative;
+	float:left;
+	margin-right:16px;
+}
+
+.ProductDetail .ProductData .BidData .Winner{
+	margin-bottom:16px;
+	height: 56px;
+	width:180px;
+    overflow: hidden;
+    position: relative;
+	float:left;
+}
+
+.ProductDetail .ProductData hr{
+	border-top: rgba(0,0,0,.12) 0px solid;
+	background:transparent;
+	color:transparent;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+	margin:4px 0 20px 0;
+}
+
+.ProductDetail .ProductData .ProdAttr{
+    overflow: hidden;
+    position: relative;
+}
+
+.ProductDetail .ProductData .ProdAttr span{
+    overflow: hidden;
+    position: relative;
+	display:inline-block;
+	margin-right:16px;
+	vertical-align:top;
+	height:71px;
+	width:80px;
+}
+
+.ProductDetail .ProductData .BidNow{
+    overflow: hidden;
+    position: relative;
+	margin-top:24px;
+}
+
+.ProductDetail .ProductData .BidNow span.Select{
+    overflow: hidden;
+    position: relative;
+	display:inline-block;
+	margin-right:16px;
+	vertical-align:top;
+	height:54px;
+	width:170px;
+	border-radius:6px;
+}
+
+.ProductDetail .ProductData .BidNow span.Btn{
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	vertical-align: top;
+	height: 44px;
+	width: 130px;
+	border-radius:6px;
+}
+
+
+.ProductDetail .InfoBar{
+	float:right;
+	width: 120px;
+	background:rgba(0,0,0,.04);
+	height:380px;
+	text-align:center;
+	line-height:380px;
+	box-sizing:border-box;
+	border-left: rgba(0,0,0,.12) 1px solid;
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+	<h1>Product</h1>
+	<div class="ProductDetail">
+		<div class="ProductGallery">
+			<div class="Thumbnail">
+				<div class="Img animated-Block"></div>
+				<div class="Img animated-Block"></div>
+				<div class="Img animated-Block"></div>
+				<div class="Img animated-Block"></div>
+			</div>
+			<div class="Content">
+				<div class="BigImg animated-Block"></div>
+				<div class="Dots">
+					<div class="dot active"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+				</div>
+			</div>
+		</div>
+		<div class="ProductData">
+			<div class="PName animated-Block"></div>
+			<div class="PTimer animated-Block"></div>
+			<div class="BidData">
+				<div class="Bid animated-Block"></div>
+				<div class="Winner animated-Block"></div>
+			</div>
+			<hr />
+			<div class="ProdAttr">
+				<span class="animated-Block"></span>
+				<span class="animated-Block"></span>
+				<span class="animated-Block"></span>
+				<span class="animated-Block"></span>
+			</div>
+			<div class="BidNow">
+				<span class="Select animated-Block"></span>
+				<span class="Btn animated-Block"></span>
+			</div>
+		</div>
+		<div class="InfoBar">InfoBar</div>
+	</div>
+	<h1>My Cart</h1>
+	<div class="CartLoading">
+		<div class="Row">
+			<div class="Img animated-Block"></div>
+			<div class="Content">
+				<div class="NamePrice">
+					<div class="Name animated-Block"></div>
+					<div class="Price animated-Block"></div>
+				</div>
+				<div class="DateTime">
+					<div class="Date animated-Block"></div>
+					<div class="Time animated-Block"></div>
+				</div>
+				<div class="Action">
+					<div class="Count animated-Block"></div>
+					<div class="Size animated-Block"></div>
+					<div class="Icon animated-Block"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Box">
+		<div class="InlineBox">
+			<h1>Feed Item</h1>
+			<div class="FeedItem">
+				<div class="Img animated-Block"></div>
+				<div class="Time">
+					<div class="animated-Block"></div>
+				</div>
+				<div class="Action">
+					<div class="Icon animated-Block"></div>
+					<div class="Price animated-Block"></div>
+				</div>
+			</div>
+		</div>
+		<div class="InlineBox">
+			<h1>Suggested Item</h1>
+			<div class="SuggestedItem">
+				<div class="Name animated-Block"></div>
+				<div class="Row">
+					<div class="Img animated-Block"></div>
+					<div class="Content">
+						<div class="Time animated-Block"></div>
+						<div class="Price animated-Block"></div>
+						<div class="Button animated-Block"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
