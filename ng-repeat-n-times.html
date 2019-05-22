@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <title>GridSystem</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <link href="node_modules/angular-ivh-treeview/dist/ivh-treeview-theme-basic.css" rel="stylesheet" />
+  <link href="node_modules/angular-ivh-treeview/dist/ivh-treeview.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="node_modules/angular-ivh-treeview/dist/ivh-treeview.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -15,7 +17,7 @@
       font-size: 14px;
     }
 
-    .myTree {
+    .ivh-treeview {
       border: rgba(0, 0, 0, .3) 1px solid;
       padding: 10px;
       margin: 50px;
@@ -23,39 +25,39 @@
       overflow: hidden;
     }
 
-    .myTree i {
+    .ivh-treeview i {
       font-size: 18px;
       transition: 150ms ease-in;
     }
 
-    .myTree i.off {
+    .ivh-treeview i.off {
       transform: rotate(-90deg);
     }
 
-    .myTree .collapseMe {
+    .ivh-treeview .collapseMe {
       cursor: pointer;
     }
 
-    .myTree div>li {
+    .ivh-treeview div>li {
       border: rgba(0, 0, 0, .12) 1px solid;
       padding: 10px;
     }
 
-    .myTree div>li+li {
+    .ivh-treeview div>li+li {
       margin-top: 10px
     }
 
-    .myTree div>li>ul {
+    .ivh-treeview div>li>ul {
       margin: 10px 0 0 0;
     }
 
-    .myTree div>li ul li {
+    .ivh-treeview div>li ul li {
       padding: 5px;
       margin-top: 5px;
       list-style: none;
     }
 
-    .myTree div>li>ul>li label {
+    .ivh-treeview div>li>ul>li label {
       cursor: pointer;
     }
 
@@ -78,26 +80,27 @@
   </style>
 </head>
 
-<body ng-controller="mainCtrl">
-  <button ng-click="ShowData()">Show Data</button>
-  <ul class="myTree">
-    <script type="text/ng-template" id="treeNodes.html">
-          <li ng-repeat="children in childrens" >
-            <i ng-if="!children.children.length" class="fa fa-caret-down visHidden"></i>  
-            <i ng-if="children.children.length" ng-click="children.expand = (children.expand?false:true);" class="collapseMe fa fa-caret-down" ng-class="{'':(children.children.length && !children.expand), 'off':(children.children.length && children.expand)}"></i>
-              <input type="checkbox" name="tall_{{$index}}" id="tall_{{$index}}" ng-checked="children.checked">
-              <span>{{children.name}}</span>
-              <ul ng-if="children.children.length" class="SubMenu" ng-class="{'open':(children.children.length && !children.expand), '':(children.children.length && children.expand)}" ng-include="'treeNodes.html'" onload="childrens = children.children">
-              </ul>
-          </li>
-        </ul>
-      </script>
-    <div ng-include=" 'treeNodes.html'"></div>
-  </ul>
+<body>
+  <div ng-controller="MyCtrl">
+    <button ng-click="ShowData()">Show Data</button>
+    <div ivh-treeview="childrens" ivh-treeview-label-attribute="name" ivh-treeview-validate="true"
+      ivh-treeview-default-selected-state="true">
+    </div>
+  </div>
 
   <script>
-    var jimApp = angular.module("mainApp", []);
-    jimApp.controller('mainCtrl', function ($scope) {
+    var jimApp = angular.module("mainApp", ['ivh.treeview']);
+
+    jimApp.config(function (ivhTreeviewOptionsProvider) {
+      ivhTreeviewOptionsProvider.set({
+        expandToDepth: 1,
+        labelAttribute: 'name',
+        selectedAttribute: 'checked',
+        indeterminateAttribute: 'indeterminate'
+      });
+    });
+
+    jimApp.controller('MyCtrl', function ($scope) {
       $scope.childrens = [
         {
           "id": "8a80cb816abc689b016abc72d8f91112",
@@ -134,6 +137,7 @@
           "name": "APPSTORE",
           "show": true,
           "checked": true,
+          "indeterminate": false,
           "itemKey": "appstore",
           "children": [
             {
@@ -165,7 +169,7 @@
                   "ownerPk": null,
                   "name": "My BluePrints",
                   "show": true,
-                  "checked": true,
+                  "checked": false,
                   "itemKey": "appstore.appstore.blueprints",
                   "children": [],
                   "createUser": null,
@@ -1097,55 +1101,17 @@
           "lastUpdateUser": null
         }
       ];
-
       $scope.ShowData = function () {
+
         console.log($scope.childrens);
+
+        // if($scope.childrens[1].checked){
+        //   console.log(true)
+        // }
+        // if($scope.childrens[1].__ivhTreeviewIndeterminate){
+        //   console.log(true)
+        // }
       }
-    });
-  </script>
-  <script>
-    $(function () {
-      $('input[type="checkbox"]').change(function (e) {
-        var checked = $(this).prop("checked"),
-          container = $(this).parent(),
-          siblings = container.siblings();
-
-        console.log(checked);
-        console.log(container);
-        console.log(siblings);
-
-
-        container.find('input[type="checkbox"]').prop({
-          //indeterminate: false,
-          checked: checked
-        });
-
-        function checkSiblings(el) {
-          var parent = el.parent().parent(),
-            all = true;
-          el.siblings().each(function () {
-            return all = ($(this).children('input[type="checkbox"]').prop("checked") === checked);
-          });
-          if (all && checked) {
-
-            parent.children('input[type="checkbox"]').prop({
-              //indeterminate: false,
-              checked: checked
-            });
-            checkSiblings(parent);
-          } else if (all && !checked) {
-            parent.children('input[type="checkbox"]').prop("checked", checked);
-            //parent.children('input[type="checkbox"]').prop("indeterminate", (parent.find('input[type="checkbox"]:checked').length > 0));
-            checkSiblings(parent);
-          } else {
-            el.parents("li").children('input[type="checkbox"]').prop({
-              //indeterminate: true,
-              checked: true
-            });
-          }
-        }
-        checkSiblings(container);
-      });
     });
   </script>
 </body>
