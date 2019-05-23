@@ -5,36 +5,195 @@
   <meta charset="utf-8">
   <title>GridSystem</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="node_modules/angular-ivh-treeview/dist/ivh-treeview.css" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
   <script src="node_modules/angular-ivh-treeview/dist/ivh-treeview.min.js"></script>
   <style>
-    body {
+    ul.ivh-treeview,
+    ul.ivh-treeview * {
+      box-sizing: border-box;
+    }
+
+    ul.ivh-treeview,
+    ul.ivh-treeview li {
       margin: 0;
-      padding: 0;
-      font-family: arial;
-      font-size: 14px;
-    }
-
-    ul, li{
       list-style-type: none;
+      padding: 0 0 0 20px;
+      text-transform: capitalize;
     }
 
-    .ivh-treeview-node-content > span:first-child{
+    ul.ivh-treeview>li {
+      margin-bottom: 15px;
+    }
+
+    .ivh-treeview-node-label{
+      transition: all .25s ease-in-out;
+    }
+
+    ul.ivh-treeview li .ivh-treeview-node-label:hover{
+      background-color: blue;
+      color:#fff;
+      padding:0 10px;
+      font-size: 11px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    ul.ivh-treeview li .ivh-treeview-node-label:hover + .ivh-treeview-children-div .ivh-treeview-node-label{
+      background-color: green;
+      color:#fff;
+      padding:0 10px;
+      font-size: 11px;
+      border-radius: 5px;
+    }
+
+    ul.ivh-treeview>li ul.ivh-treeview>li {
+      padding: 5px 0 0 0px;
+      border: none;
+      margin: 0;
+    }
+
+    ul.ivh-treeview>li>div {
+      position: relative;
+    }
+
+    ul.ivh-treeview>li>div:before {
+      content: "";
+      display: block;
+      width: 0;
+      position: absolute;
+      top: -5px;
+      bottom: 9px;
+      left: 10px;
+      border-left: #369 1px solid;
+    }
+
+    ul.ivh-treeview>li>div>ul>li {
+      position: relative;
+    }
+
+    ul.ivh-treeview>li>div>ul>li:before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 0;
+      border-top: #369 1px solid;
+      margin-top: -1px;
+      position: absolute;
+      top: 16px;
+      left: -10px;
+    }
+
+
+    ul.ivh-treeview span {
       display: inline-block;
-      width:22px;
-      border:#ccc 1px solid;
+      line-height: 20px;
+      vertical-align: top;
+    }
+
+    ul.ivh-treeview span.ivh-treeview-checkbox-wrapper {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    ul.ivh-treeview li.ivh-treeview-node-collapsed ul.ivh-treeview {
+      display: none;
+    }
+
+    ul.ivh-treeview .ivh-treeview-twistie-leaf,
+    ul.ivh-treeview .ivh-treeview-twistie-collapsed {
+      display: none;
+    }
+
+    .ivh-treeview-twistie-expanded,
+    .ivh-treeview-twistie-collapsed,
+    .ivh-treeview-twistie-leaf {
+      position: relative;
+      color: transparent;
+    }
+
+    .ivh-treeview-twistie-expanded:after,
+    .ivh-treeview-twistie-collapsed:after,
+    .ivh-treeview-twistie-leaf:after {
+      font: normal normal normal 14px/1 FontAwesome;
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      line-height: 20px;
+      cursor: pointer;
+      background-color: #369;
+      color: #fff;
+      border-radius: 4px;
     }
 
 
+    .ivh-treeview-twistie-expanded:after {
+      content: "\f0d7";
+    }
+
+    .ivh-treeview-twistie-collapsed:after {
+      content: "\f0da";
+    }
+
+    .ivh-treeview-twistie-leaf:after {
+      content: "\f055";
+    }
+
+
+
+    ul.ivh-treeview .ivh-treeview-node-collapsed .ivh-treeview-twistie-collapsed,
+    .ivh-treeview-twistie-expanded {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      vertical-align: top;
+      text-align: center;
+    }
+
+    ul.ivh-treeview .ivh-treeview-node-collapsed .ivh-treeview-twistie-expanded {
+      display: none;
+    }
+
+    ul.ivh-treeview li.ivh-treeview-node-leaf .ivh-treeview-twistie-leaf {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      vertical-align: top;
+      text-align: center;
+      color: transparent;
+      visibility: hidden;
+    }
+
+    ul.ivh-treeview li.ivh-treeview-node-leaf .ivh-treeview-twistie-expanded,
+    ul.ivh-treeview li.ivh-treeview-node-leaf .ivh-treeview-twistie-collapsed {
+      display: none;
+    }
   </style>
 </head>
 
 <body>
   <div ng-controller="MyCtrl">
-    <button ng-click="ShowData()">Show Data</button>
-    <div ivh-treeview="childrens" ivh-treeview-label-attribute="name" ivh-treeview-validate="true"
+    <!-- <div ivh-treeview="childrens" ivh-treeview-label-attribute="name" ivh-treeview-validate="true"
       ivh-treeview-default-selected-state="true">
+    </div> -->
+
+    <div ivh-treeview="childrens">
+      <script type="text/ng-template">
+          <span ivh-treeview-toggle>
+            <span ivh-treeview-twistie></span>
+          </span>
+          <span class="ivh-treeview-checkbox-wrapper" ivh-treeview-checkbox is-cb-enabled>
+          </span>
+          <span class="ivh-treeview-node-label" ivh-treeview-toggle>
+            {{trvw.label(node)}}
+          </span>
+          <div class="ivh-treeview-children-div" ivh-treeview-children></div>
+        </script>
     </div>
   </div>
 
@@ -43,7 +202,7 @@
 
     jimApp.config(function (ivhTreeviewOptionsProvider) {
       ivhTreeviewOptionsProvider.set({
-        expandToDepth: 1,
+        expandToDepth: 10,
         labelAttribute: 'name',
         selectedAttribute: 'checked',
         indeterminateAttribute: 'indeterminate'
@@ -1052,15 +1211,7 @@
         }
       ];
       $scope.ShowData = function () {
-
         console.log($scope.childrens);
-
-        // if($scope.childrens[1].checked){
-        //   console.log(true)
-        // }
-        // if($scope.childrens[1].__ivhTreeviewIndeterminate){
-        //   console.log(true)
-        // }
       }
     });
   </script>
