@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>The internal clock in JavaScript starts at midnight January 1, 1970.</p>
+    <p>Click the button to display the number of milliseconds since midnight, January 1, 1970.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    <button onclick="clickFunction()">Duration</button>
+
+    <p id="demo"></p>
+    <p id="duration"></p>
+    31535999
+    <script>
+        var current;
+        function myFunction() {
+            var d = new Date();
+            var n = d.getTime();
+            current = n;
+            document.getElementById("demo").innerHTML = n;
+        }
+
+        var now;
+        function clickFunction() {
+            var d = new Date();
+            var n = d.getTime();
+            now = n;
+            document.getElementById("duration").innerHTML = now - current;
+        }
+
+    </script>
+
+</body>
+
+</html>
