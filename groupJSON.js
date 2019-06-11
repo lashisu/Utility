@@ -7,7 +7,7 @@ function formatDate(date) {
     if (twoDigitDate.length == 1)
         twoDigitDate = "0" + twoDigitDate;
     //var currentDate = twoDigitDate + "/" + twoDigitMonth + "/" + fullDate.getFullYear(); 
-    var currentDate = "dt" + twoDigitDate + "" + twoDigitMonth + "" + fullDate.getFullYear() + "for";
+    var currentDate = twoDigitDate + "" + twoDigitMonth + "" + fullDate.getFullYear();
     return currentDate;
 }
 
