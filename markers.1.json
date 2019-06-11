@@ -1,0 +1,60 @@
+[
+  {
+    "endDateTimeUTC": "2019-05-01T04:32:12.917Z",
+    "feed": [
+      {
+        "auctionId": 287155538,
+        "itemNumber": "13-373",
+        "title": "GOLDCITY Sneakers for Men : Grey",
+        "status": "Lost",
+        "endDateTimeUTC": "2019-05-01T04:32:12.917Z",
+        "endDateTimeUTC_String": "2019-05-01T04:32:12.9170000Z",
+        "userCurrentBid": 41,
+        "winningBid": 111,
+        "imageBaseAddress": "https://cdn-chilindo.com",
+        "imagePath": "/XML/Gfx/13-373/13-373-1-1_75.jpg"
+      },
+      {
+        "auctionId": 280657252,
+        "itemNumber": "41-994",
+        "title": "GESTREO Hot and Cold Water Dispenser",
+        "status": "Lost",
+        "endDateTimeUTC": "2019-05-01T04:32:12.917Z",
+        "endDateTimeUTC_String": "2019-05-01T04:32:12.9170000Z",
+        "userCurrentBid": 201,
+        "winningBid": 601,
+        "imageBaseAddress": "https://cdn-chilindo.com",
+        "imagePath": "/XML/Gfx/41-994/41-994-main1.1_75.jpg"
+      }
+    ]
+  },
+  {
+    "endDateTimeUTC": "2019-01-04T06:52:02.217Z",
+    "feed": [
+      {
+        "auctionId": 239628990,
+        "itemNumber": "41-462",
+        "title": "Drinking Water Pump",
+        "status": "Lost",
+        "endDateTimeUTC": "2019-01-04T06:52:02.217Z",
+        "endDateTimeUTC_String": "2019-01-04T06:52:02.2170000Z",
+        "userCurrentBid": 26,
+        "winningBid": 31,
+        "imageBaseAddress": "https://cdn-chilindo.com",
+        "imagePath": "/XML/Gfx/41-462/41-462_01_75.jpg"
+      },
+      {
+        "auctionId": 165456479,
+        "itemNumber": "41-462",
+        "title": "Drinking Water Pump",
+        "status": "Lost",
+        "endDateTimeUTC": "2019-01-04T06:52:02.217Z",
+        "endDateTimeUTC_String": "2019-01-04T06:52:02.2170000Z",
+        "userCurrentBid": 11,
+        "winningBid": 26,
+        "imageBaseAddress": "https://cdn-chilindo.com",
+        "imagePath": "/XML/Gfx/41-462/41-462_01_75.jpg"
+      }
+    ]
+  }
+]

@@ -9,23 +9,48 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="d3.v3.min.js"></script>
 	<script src="jquery.min.js"></script>
-	<script
-		src="bootstrap.min.js"></script>
+	<script src="bootstrap.min.js"></script>
 </head>
 
 <body>
-		<div class='col-sm-12 col-md-6'>
-				<div class="panel panel-card">
-					<div class="panel-title">
-						<h5 class='no-margin m-b'>Sensor Network Monitor</h5>
-					</div>
-					<div class="panel-body">
-						<div id="sensor-net-area-d3" style="height:280px;"></div>
-					</div>
-				</div>
+	<div class='col-sm-12 col-md-6'>
+		<div class="panel panel-card">
+			<div class="panel-title">
+				<h5 class='no-margin m-b'>Sensor Network Monitor</h5>
 			</div>
+			<div class="panel-body">
+				<div id="sensor-net-area-d3" style="height:280px;"></div>
+			</div>
+		</div>
+	</div>
 	<script>
 		var displayNet = function () {
+
+			var mydata = {
+				"customerId": "cust1",
+				"customerName": "custName1",
+				"serviceName": "STORAGE",
+				"serviceUsuageForSubscriptions": [{
+					"subscriptionId": "subs1",
+					"subscriptionName": "subs1Name",
+					"month": "MAY",
+					"usuage": 7.8,
+					"unit": "GB"
+				}, {
+					"subscriptionId": "subs1",
+					"subscriptionName": "subs1Name",
+					"month": "MARCH",
+					"usuage": 7.8,
+					"unit": "GB"
+				}, {
+					"subscriptionId": "subs2",
+					"subscriptionName": "subs2Name",
+					"month": "MAY",
+					"usuage": 7.8,
+					"unit": "GB"
+				}]
+			}
+			
 			var data = [
 				{ time: '10:01', upload: 200, download: 500, total: 1000 },
 				{ time: '10:02', upload: 620, download: 600, total: 1000 },
@@ -37,6 +62,9 @@
 				{ time: '10:08', upload: 350, download: 70, total: 1000 },
 				{ time: '10:09', upload: 750, download: 200, total: 1000 }
 			];
+
+
+
 			var category = ['upload', 'download'];
 			var hAxis = 10, mAxis = 10;
 
@@ -49,7 +77,7 @@
 				var parseDate = d3.time.format("%H:%M").parse;
 
 				var legendSize = 10,
-					legendColor = { 'upload': 'rgba(0, 160, 233, 1)', 'download': 'rgba(34, 172, 56, 1)' };
+					legendColor = { 'upload': 'blue', 'download': 'red' };
 
 				var x = d3.time.scale()
 					.range([0, width]);
@@ -87,9 +115,6 @@
 
 					return seriesArr;
 				})();
-
-				// q = ddata;
-				// console.log(ddata);
 
 				x.domain(d3.extent(data, function (d) { return parseDate(d['time']); }));
 
@@ -172,102 +197,7 @@
 					.attr("cy", function (d) { return y(d['num']); })
 					.text(function (d) { return d['num']; })
 					.attr("r", "6px")
-					.style("fill", function (d) { return legendColor[d['category']]; })
-					.on("mouseover", function (d) {
-						// console.log();
-						var currentX = $(this)[0]['cx']['animVal']['value'],
-							currentY = $(this)[0]['cy']['animVal']['value'];
-
-						d3.select(this).transition().duration(100).style("opacity", 1);
-
-						var ret = $('.tipNetPoints').filter(function (index) {
-							return ($(this)[0]['cx']['animVal']['value'] === currentX && $(this)[0]['cy']['animVal']['value'] !== currentY);
-						});
-
-						//to adjust tooltip'x content if upload and download data are the same
-						var jud = ret.length;
-
-						// console.log(ret.length);
-
-						var mainCate = (function () {
-							if (jud === 0)
-								return 'upload/download';
-							else
-								return d['category'];
-						})();
-
-						var viceCate = (function () {
-							if (category[0] === d['category'])
-								return category[1];
-							else
-								return category[0];
-						})();
-
-						$.each(ret, function (index, val) {
-							// console.log(mainCate + ' | ' + viceCate);
-
-							$(val).animate({
-								opacity: "1"
-							}, 100);
-
-							$(val).tooltip({
-								'container': 'body',
-								'placement': 'left',
-								'title': viceCate + ' | ' + $(this)[0]['textContent'],
-								'trigger': 'hover'
-							})
-								.tooltip('show');
-						});
-
-						svg.append("g")
-							.attr("class", "tipDot")
-							.append("line")
-							.attr("class", "tipDot")
-							.transition()
-							.duration(50)
-							.attr("x1", $(this)[0]['cx']['animVal']['value'])
-							.attr("x2", $(this)[0]['cx']['animVal']['value'])
-							.attr("y2", height);
-
-						svg.append("polyline")
-							.attr("class", "tipDot")
-							.style("fill", "black")
-							.attr("points", ($(this)[0]['cx']['animVal']['value'] - 3.5) + "," + (0 - 2.5) + "," + $(this)[0]['cx']['animVal']['value'] + "," + (0 + 6) + "," + ($(this)[0]['cx']['animVal']['value'] + 3.5) + "," + (0 - 2.5));
-
-						svg.append("polyline")
-							.attr("class", "tipDot")
-							.style("fill", "black")
-							.attr("points", ($(this)[0]['cx']['animVal']['value'] - 3.5) + "," + (y(0) + 2.5) + "," + $(this)[0]['cx']['animVal']['value'] + "," + (y(0) - 6) + "," + ($(this)[0]['cx']['animVal']['value'] + 3.5) + "," + (y(0) + 2.5));
-
-						$(this).tooltip({
-							'container': 'body',
-							'placement': 'left',
-							'title': mainCate + ' | ' + d['num'],
-							'trigger': 'hover'
-						})
-							.tooltip('show');
-					})
-					.on("mouseout", function (d) {
-						var currentX = $(this)[0]['cx']['animVal']['value'];
-
-						d3.select(this).transition().duration(100).style("opacity", 0);
-
-						var ret = $('.tipNetPoints').filter(function (index) {
-							return ($(this)[0]['cx']['animVal']['value'] === currentX);
-						});
-
-						$.each(ret, function (index, val) {
-							$(val).animate({
-								opacity: "0"
-							}, 100);
-
-							$(val).tooltip('destroy');
-						});
-
-						d3.selectAll('.tipDot').transition().duration(100).remove();
-
-						$(this).tooltip('destroy');
-					});
+					.style("fill", function (d) { return legendColor[d['category']]; });
 
 				this.getOpt = function () {
 					var axisOpt = new Object();
@@ -337,8 +267,6 @@
 							return 'areaD';
 					});
 
-				//circle updating
-
 				points.selectAll(".tipNetPoints")
 					.data(function (d) { return d['values']; })
 					.attr("class", "tipNetPoints")
@@ -346,10 +274,6 @@
 					.attr("cy", function (d) { return y(d['num']); })
 					.attr("r", "6px")
 					.style("fill", function (d) { return legendColor[d['category']]; });
-
-				// //draw new dot
-
-				// console.log(ddata);
 				points.data(ddata);
 
 				points.selectAll(".tipNetPoints")
@@ -363,133 +287,10 @@
 					.text(function (d) { return d['num']; })
 					.attr("r", "6px")
 					.style("fill", function (d) { return legendColor[d['category']]; })
-					.on("mouseover", function (d) {
-						// console.log();
-						var currentX = $(this)[0]['cx']['animVal']['value'],
-							currentY = $(this)[0]['cy']['animVal']['value'];
-
-						d3.select(this).transition().duration(100).style("opacity", 1);
-
-						var ret = $('.tipNetPoints').filter(function (index) {
-							return ($(this)[0]['cx']['animVal']['value'] === currentX && $(this)[0]['cy']['animVal']['value'] !== currentY);
-						});
-
-						//to adjust tooltip'x content if upload and download data are the same
-						var jud = ret.length;
-
-						var mainCate = (function () {
-							if (jud === 0)
-								return 'upload/download';
-							else
-								return d['category'];
-						})();
-
-						var viceCate = (function () {
-							if (category[0] === d['category'])
-								return category[1];
-							else
-								return category[0];
-						})();
-
-						$.each(ret, function (index, val) {
-							$(val).animate({
-								opacity: "1"
-							}, 100);
-
-							$(val).tooltip({
-								'container': 'body',
-								'placement': 'left',
-								'title': viceCate + ' | ' + $(this)[0]['textContent'],
-								'trigger': 'hover'
-							})
-								.tooltip('show');
-						});
-
-						// console.log("the correct xaxis is: ", currentX, 'but the output is ', x(d['time']), '$this object is: ', $(this)[0]['cx']['animVal']['value']);
-
-						svg.append("g")
-							.attr("class", "tipDot")
-							.append("line")
-							.attr("class", "tipDot")
-							.transition()
-							.duration(50)
-							.attr("x1", $(this)[0]['cx']['animVal']['value'])
-							.attr("x2", $(this)[0]['cx']['animVal']['value'])
-							.attr("y2", height);
-
-						svg.append("polyline")
-							.attr("class", "tipDot")
-							.style("fill", "black")
-							.attr("points", ($(this)[0]['cx']['animVal']['value'] - 3.5) + "," + (0 - 2.5) + "," + $(this)[0]['cx']['animVal']['value'] + "," + (0 + 6) + "," + ($(this)[0]['cx']['animVal']['value'] + 3.5) + "," + (0 - 2.5));
-
-						svg.append("polyline")
-							.attr("class", "tipDot")
-							.style("fill", "black")
-							.attr("points", ($(this)[0]['cx']['animVal']['value'] - 3.5) + "," + (y(0) + 2.5) + "," + $(this)[0]['cx']['animVal']['value'] + "," + (y(0) - 6) + "," + ($(this)[0]['cx']['animVal']['value'] + 3.5) + "," + (y(0) + 2.5));
-
-						$(this).tooltip({
-							'container': 'body',
-							'placement': 'left',
-							'title': mainCate + ' | ' + d['num'],
-							'trigger': 'hover'
-						})
-							.tooltip('show');
-					})
-					.on("mouseout", function (d) {
-						var currentX = $(this)[0]['cx']['animVal']['value'];
-
-						d3.select(this).transition().duration(100).style("opacity", 0);
-
-						var ret = $('.tipNetPoints').filter(function (index) {
-							return ($(this)[0]['cx']['animVal']['value'] === currentX);
-						});
-
-						$.each(ret, function (index, val) {
-							$(val).animate({
-								opacity: "0"
-							}, 100);
-
-							$(val).tooltip('destroy');
-						});
-
-						d3.selectAll('.tipDot').transition().duration(100).remove();
-
-						$(this).tooltip('destroy');
-					});
-
-				//remove old dot
-				points.selectAll(".tipNetPoints")
-					.data(function (d) { return d['values']; })
-					.exit()
-					.transition()
-					.duration(200)
-					.remove();
-
 			}
-
 			//inits chart
 			var sca = new generate(data, "#sensor-net-area-d3", "linear", 6);
-
-			//dynamic data and chart update
-			setInterval(function () {
-				//update donut data
-				data.push({ time: hAxis + ":" + mAxis, upload: Math.random() * 200 + 400, download: Math.random() * 400 + 200, total: 1000 });
-
-				// console.log(tAxis);
-				if (mAxis === 59) {
-					hAxis++;
-					mAxis = 0;
-				}
-				else {
-					mAxis++;
-				}
-
-				if (Object.keys(data).length === 20) data.shift();
-
-				redraw(data, "#sensor-net-area-d3", sca.getOpt()['x'], sca.getOpt()['y'], sca.getOpt()['xAxis'], sca.getSvg()['svg'], sca.getSvg()['area'], sca.getSvg()['path'], sca.getSvg()['points'], sca.getSvg()['legendColor'], sca.getOpt()['height'], 6);
-			}, 3500);
 		}
-
 		displayNet();
 	</script>
 </body>
