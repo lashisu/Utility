@@ -1,0 +1,1109 @@
+{
+  "auctions": [
+    {
+      "id": 303014204,
+      "itemNumber": "02-044",
+      "title": "Induction Cooker ",
+      "endDateTimeUTC_String": "2019-06-03T05:56:57.8270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-044/02-044-001_250.jpg"
+    },
+    {
+      "id": 303015266,
+      "itemNumber": "05-136",
+      "title": "Universal Mobile phone Protector",
+      "endDateTimeUTC_String": "2019-06-03T05:58:33.4930000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/05-136/05-136_001_250.jpg"
+    },
+    {
+      "id": 315615864,
+      "itemNumber": "04-236",
+      "title": "EVE Slip-On Sneakers",
+      "endDateTimeUTC_String": "2019-06-21T03:54:07.5600000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/04-236/04-236-Main-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627356,
+      "itemNumber": "51-059",
+      "title": "SKG Multi functional Vacuum Broom : Green",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-059/51-059-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634756,
+      "itemNumber": "46-395",
+      "title": "4 Person Camping Tent",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/46-395/46-395-main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634706,
+      "itemNumber": "45-627",
+      "title": "EVE Women's Sneakers",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-627/45-627.1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634504,
+      "itemNumber": "15-531",
+      "title": "AR Multi Dimension Super Brow 3 in1 ",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/15-531/15-531-01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634523,
+      "itemNumber": "16-286",
+      "title": "Audio speaker wire",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-286/16-286-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634524,
+      "itemNumber": "16-288",
+      "title": "C6 LED Headlight",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-288/16-288-main3_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634607,
+      "itemNumber": "41-447",
+      "title": "SPEED OUT Damaged Screw Extractor",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/41-447/41-447-Main2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634645,
+      "itemNumber": "42-702",
+      "title": "Wireless Microphone With Speaker",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-702/42-702-main11_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/42-702/42-702_WirelessMicrophone_WEB_Earth_ENG_19s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/42-702/Thumbnail_Square_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317634527,
+      "itemNumber": "16-394",
+      "title": "O- Ring Rubber seal 419 pcs assortment ",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-394/16-394-01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634730,
+      "itemNumber": "45-940",
+      "title": "Broom Holder ",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-940/45-940-01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634780,
+      "itemNumber": "51-287",
+      "title": "1/2\" DR Socket Set (24piece)",
+      "endDateTimeUTC_String": "2019-06-25T08:40:04.7270000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-287/51-287-01_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/51-287/51-287_DR_Socket_Set_TJ_WEB_EN_15S_R_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/51-287/Thumb_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317634145,
+      "itemNumber": "43-046",
+      "title": "Portable Folding Shovel",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-046/43-046-remain_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634144,
+      "itemNumber": "43-008",
+      "title": "Slim 'N Lift for Men",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-008/43-008-12_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/43-008/43-008_SlimNLiftForMen_WEB_Martin_ENG_30s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/43-008/thumbnail_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317634255,
+      "itemNumber": "46-296",
+      "title": "EVE Women's Backpack",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/46-296/46-296-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317633884,
+      "itemNumber": "02-646",
+      "title": "Trouser hanger",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-646/02-646_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634037,
+      "itemNumber": "16-449",
+      "title": "Motorbike Brake Line",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-449/16-449-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634148,
+      "itemNumber": "43-122",
+      "title": "Inflatable Car Air Bed",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-122/43-122-Main2_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/43-122/43-122_InflatableCarAirBed_WEB_Martin_Eng_15s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/43-122/thumbnail_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317634135,
+      "itemNumber": "42-135",
+      "title": "NUBWO 2.1 Computer Speaker",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-135/42-135-0001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634221,
+      "itemNumber": "45-788",
+      "title": "CRAFIX Car Polisher",
+      "endDateTimeUTC_String": "2019-06-25T08:40:10.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-788/45-788_011_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/45-788/45-788_CrafixCarPolisher_15s_Earth_Web_Eng_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/45-788/Thumbnail_Square_WEB.jpg",
+            "thumbGroups": []
+          }
+        },
+        {
+          "path": "https://vdo.chilindo.com/hls/45-788/45-788_CrafixCarPolisher_15s_Earth_Web_Eng_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/45-788/Thumbnail_Square_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317634862,
+      "itemNumber": "02-008",
+      "title": "Boiled Eggs Cooker",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-008/02-008-001_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/02-008/02-008_BoiledEggsCooker_WEB_Martin_Eng_30s_R_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/02-008/thumbnail_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317635149,
+      "itemNumber": "41-617",
+      "title": "4.3\" Player Digital Game Player",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/41-617/41-617-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634925,
+      "itemNumber": "03-021",
+      "title": "AR Tomato Aloe Snail Foam Face Wash",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/03-021/03-021_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634937,
+      "itemNumber": "04-094",
+      "title": "NEAT watch",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/04-094/04-094-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635064,
+      "itemNumber": "16-278",
+      "title": "Ratchet Tie-Down Straps 4 pc set ",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-278/16-278-mainreagain_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635176,
+      "itemNumber": "42-163",
+      "title": "Electronic Neck Massager",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-163/42-163-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634866,
+      "itemNumber": "02-082",
+      "title": "Mosquito Net",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-082/02-082-MAinre_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635177,
+      "itemNumber": "42-167",
+      "title": "NUBWO KENDO Gaming Headset",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-167/42-167-Main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635269,
+      "itemNumber": "45-785",
+      "title": "Camping Hammock",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-785/45-785_01_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/45-785/45-785_Camping Hammock_ENG_WEB_Kwan_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/45-785/45-785_Camping_Hammock_thumb_Web.jpg",
+            "thumbGroups": [
+              1080
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 317635277,
+      "itemNumber": "45-874",
+      "title": "Automatic Pet Food Dispenser ",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-874/45-874-Main2_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/45-874/45-874_Automatic_pet_food_Dispenser_Flx_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/45-874/45-874_Automatic_pet_food_Dispenser_Thumb.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317635045,
+      "itemNumber": "15-594",
+      "title": "Honeymoon Valentine condom",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/15-594/15-594-Main3_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635161,
+      "itemNumber": "41-762",
+      "title": "Tripod Folding Chair",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/41-762/41-762-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635087,
+      "itemNumber": "20-062",
+      "title": "Body Armor Motorcycle Jacket",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/20-062/20-062-Main2_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/20-062/20-062_BodyArmorMotorcycleJacket_Pocky_WEB_EN_13s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/20-062/WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317635333,
+      "itemNumber": "51-389",
+      "title": "Adjustable Circle Cutter",
+      "endDateTimeUTC_String": "2019-06-25T08:40:17.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-389/51-389-1_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/51-389/51-389_adjustable-circle-cutter_Pocky_WEB_EN_13s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/51-389/WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317634341,
+      "itemNumber": "60-507",
+      "title": "Eurobike X1 Mountain Bike",
+      "endDateTimeUTC_String": "2019-06-25T08:40:48.7700000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/60-507/60-507_01_011_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/60-507/60-507_EurobikeX1_WEB_Martin_Eng_15s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/60-507/thumbnail_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317630698,
+      "itemNumber": "16-291",
+      "title": "Power Capacitor",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-291/16-291-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630682,
+      "itemNumber": "15-475",
+      "title": "AOROA Lipstick",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/15-475/15-475-001_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/15-475/15-475_15-476_15-477_15-478_Lipstick_Aoroa_ENG_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/15-475/Thumb_car.png",
+            "thumbGroups": [
+              1080
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 317630741,
+      "itemNumber": "40-814",
+      "title": "Wireless Cat LED Ear Headphone",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/40-814/40-814-01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630681,
+      "itemNumber": "15-442",
+      "title": "AOROA Waterproof Eyeliner",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/15-442/15-442-01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630629,
+      "itemNumber": "05-196",
+      "title": "Personal Safety Alarm",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/05-196/05-196-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630546,
+      "itemNumber": "02-575",
+      "title": "Solar Hanging Flip One Torch",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-575/02-575-01_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/02-575/02-575_SolarHangingFlipOneTorch_WEB_Martin_Eng_15s_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/02-575/thumbnail_WEB.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317630571,
+      "itemNumber": "03-022",
+      "title": "AR Underarm Deodorant Powder",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/03-022/03-022-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630863,
+      "itemNumber": "45-578",
+      "title": "Men's Casual Slippers",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-578/45-578_011_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630669,
+      "itemNumber": "13-327",
+      "title": "JASO Make Up Set : #02",
+      "endDateTimeUTC_String": "2019-06-25T08:41:17.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/13-327/13-327-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317626966,
+      "itemNumber": "05-210",
+      "title": "iPhone Lighting to 3.5 AUX Cable",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/05-210/05-210-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627256,
+      "itemNumber": "45-563",
+      "title": "Carbon Key Organizer",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-563/45-563-Main2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317626863,
+      "itemNumber": "02-804",
+      "title": " Door Knob Covers",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-804/02-804-main.1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627167,
+      "itemNumber": "42-149",
+      "title": "Wireless Charging and Organizing Mouse Pad ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-149/42-149-reMain1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317626866,
+      "itemNumber": "02-887",
+      "title": "Dream Swing Chair",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-887/02-887main2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317626889,
+      "itemNumber": "04-047",
+      "title": "MIOMORI Vinyl Shoulder Bag ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/04-047/04-047-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627039,
+      "itemNumber": "16-254",
+      "title": "Car Care Cleaning Kit ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-254/19-12-61-0261_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627123,
+      "itemNumber": "41-354",
+      "title": "GloveLite Glove with LED Light",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/41-354/13620080_147703298985331_3548113077713784330_n_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627292,
+      "itemNumber": "45-808",
+      "title": "EVE Women's Wristwatch",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-808/45-808-main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317627435,
+      "itemNumber": "70-500",
+      "title": "MIRIMOKO Bow Flat",
+      "endDateTimeUTC_String": "2019-06-25T08:41:38.0330000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/70-500/70-500-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631389,
+      "itemNumber": "16-349",
+      "title": "Sunglasses 5 pcs Lens Set ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-349/16-349_001_edit_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631801,
+      "itemNumber": "70-620",
+      "title": "BOYZT Camouflage Sunglasses",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/70-620/70-620_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631532,
+      "itemNumber": "43-174",
+      "title": "NEAT Men's Sneakers",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-174/43-174-main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631769,
+      "itemNumber": "60-320",
+      "title": "Collapsible Camping Lamp",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/60-320/60-320-main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631378,
+      "itemNumber": "16-213",
+      "title": " Front bumper skirt     ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-213/16-213-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631230,
+      "itemNumber": "05-137",
+      "title": "Universal Tablet Protector",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/05-137/05-137_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631703,
+      "itemNumber": "51-252",
+      "title": "Hand saw   ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-252/51-252-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631531,
+      "itemNumber": "43-168",
+      "title": "NEAT Men's Bag",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-168/43-168-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631690,
+      "itemNumber": "50-501",
+      "title": "Multi-Purpose Pocket Torch : Black-Red Color",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/50-501/50-501-2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631562,
+      "itemNumber": "43-638",
+      "title": "Crafix Tools Pouch : Triangle Design",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-638/43-638-Main2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631053,
+      "itemNumber": "02-516",
+      "title": "Watercolor pen",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-516/02-516-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317631396,
+      "itemNumber": "16-457",
+      "title": "\r\nCurved wide view mirror ",
+      "endDateTimeUTC_String": "2019-06-25T08:41:57.1200000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-457/16-457_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635380,
+      "itemNumber": "70-454",
+      "title": "MIRIMOKO Candy Bar Sneakers",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/70-454/70-454_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634917,
+      "itemNumber": "02-881",
+      "title": "Steamer Pot",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-881/02-881-main_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/02-881/02-881_Steamer_Pot_TJ_WEBSCENE_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/02-881/02-881.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317635320,
+      "itemNumber": "51-171",
+      "title": "6 pcs Wrench Set",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-171/51-171-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635140,
+      "itemNumber": "41-460",
+      "title": "Zoomies Handsfree Binoculars",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/41-460/41-460-12_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635163,
+      "itemNumber": "41-814",
+      "title": "Motorcycle Luggage Box",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/41-814/41-814-main.1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635099,
+      "itemNumber": "40-598",
+      "title": "5 Holes Socket",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/40-598/40-598-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635198,
+      "itemNumber": "43-522",
+      "title": "Women's Watch",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-522/43-522.Main-edit_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635106,
+      "itemNumber": "40-745",
+      "title": "NUBWO ACTIVE SPEAKER MASTER",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/40-745/40-745-Main1_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/40-745/40-745_NUBWO_Active_Speaker_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/40-745/40-745_NUBWO_Active_Speaker_Thumb.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317635384,
+      "itemNumber": "70-498",
+      "title": "4 in 1 Baby Nail Clippers Set",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/70-498/70-498_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317635327,
+      "itemNumber": "51-320",
+      "title": "Lopper Shears ",
+      "endDateTimeUTC_String": "2019-06-25T08:42:08.9530000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-320/51-320-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634173,
+      "itemNumber": "43-665",
+      "title": "Ankle Strap Sandals for Men",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-665/43-665_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317633883,
+      "itemNumber": "02-638",
+      "title": "Single Size Bed",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-638/02-638presell_001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634065,
+      "itemNumber": "40-737",
+      "title": "Handheld Dynamic Microphone   ",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/40-737/40-737remain_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317633869,
+      "itemNumber": "02-333",
+      "title": "Cooking Gas Cylinder Stand",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-333/02-333-Main2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317633873,
+      "itemNumber": "02-419",
+      "title": "Toothbrush Holder",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-419/02-419-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317633906,
+      "itemNumber": "03-026",
+      "title": "GIFTFINE Body salt scrub",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/03-026/03-026-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634251,
+      "itemNumber": "46-245",
+      "title": "Fishing Tools Kit",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/46-245/46-245_01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317633893,
+      "itemNumber": "02-773",
+      "title": "Heavy Duty Stapler",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/02-773/02-773-main_250.jpg",
+      "videos": [
+        {
+          "path": "https://vdo.chilindo.com/hls/02-773/02-773_Heavy_Duty_Stapler_Flx_Final_,240,360,480,720,960,1080,.mp4.urlset/master.m3u8",
+          "placement": "video1",
+          "thumbnail": {
+            "itemId": 0,
+            "baseAddress": "https://cdn.chilindo.com",
+            "placement": "video1",
+            "genericImagePath": "/XML/Gfx/02-773/02-773_Heavy_Duty_Stapler_Flixel_Thumb.jpg",
+            "thumbGroups": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 317633854,
+      "itemNumber": "00-108",
+      "title": "LE CUISSON Tableware",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/00-108/00-108-main_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634198,
+      "itemNumber": "45-446",
+      "title": "Shoulder Bag with Triangular Print",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-446/45-446-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634149,
+      "itemNumber": "43-177",
+      "title": "NEAT Backpack",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/43-177/43-177-01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317634032,
+      "itemNumber": "16-378",
+      "title": "14\" Emergency Cone with Light",
+      "endDateTimeUTC_String": "2019-06-25T08:42:18.3300000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/16-378/16-378-main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630596,
+      "itemNumber": "04-220",
+      "title": "24k gold plated Free Size Naga Ring",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/04-220/04-220-main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630803,
+      "itemNumber": "42-392",
+      "title": "BERALA 1/2\" Drill Press",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-392/42-392-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630927,
+      "itemNumber": "51-051",
+      "title": "CLEO Vacuum Cleaner 1200W",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-051/51-051-Main2_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630668,
+      "itemNumber": "11-622",
+      "title": "Digital Watch Bracelet",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/11-622/11-622_001Reshoot_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630903,
+      "itemNumber": "46-279",
+      "title": "CRAFIX sledge hammer ",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/46-279/46-279-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630855,
+      "itemNumber": "45-154",
+      "title": "EVE Travel Backpack",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-154/45-154_01_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630858,
+      "itemNumber": "45-455",
+      "title": "Children's Backpack",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/45-455/45-455-001_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630950,
+      "itemNumber": "51-624",
+      "title": "Laser Level Pro 3 Measuring Tape : Black / Orange",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/51-624/51-624-Main1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317630804,
+      "itemNumber": "42-404",
+      "title": "BERALA Compound Miter Saw",
+      "endDateTimeUTC_String": "2019-06-25T08:42:22.7900000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/42-404/42-404-1_250.jpg",
+      "videos": []
+    },
+    {
+      "id": 317632467,
+      "itemNumber": "40-327",
+      "title": "XTAURI zipper 2 in1 cable",
+      "endDateTimeUTC_String": "2019-06-25T08:43:21.1430000Z",
+      "currentBidInUserCurrency": 1,
+      "imageSource": "https://cdn.chilindo.com/XML/Gfx/40-327/40-327remain2_250.jpg",
+      "videos": []
+    }
+  ]
+}
